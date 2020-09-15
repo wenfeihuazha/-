@@ -1,0 +1,13 @@
+{
+  "name": "LearnEveryDay",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/wenfeihuazha/LearnEveryDay.git",
+  "author": "zhanghy <454468165@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "d": "bash deploy.sh"
+  }
+}
