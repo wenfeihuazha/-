@@ -54,3 +54,26 @@ module.exports = {
     // }
   }
 }
+
+(async ()=>{
+  async function async1 (){
+    console.log('A');
+    await async2();
+    console.log('B')
+  };
+  async function async2 (){
+    console.log('C');
+  };
+  console.log('D');
+  setTimeout(function(){
+    console.log('F')
+  },0);
+  await async1();
+  new Promise(function(resolve){
+    console.log('G');
+    resolve();
+  }).then(function(){
+    console.log('H')
+  });
+  console.log('I');
+})();
