@@ -15,7 +15,7 @@ cd docs/.vuepress/dist
 git init
 git add -A
 git commit -m 'deploy'
-git push -f git@github.com:wenfeihuazha/LearnEveryDay.git master:gh-pages
+git push -f git@github.com:wenfeihuazha/LearnEveryDay.git master
 # 如果发布到 https://<USERNAME>.github.io  USERNAME=你的用户名 
 # git push -f git@github.com:<USERNAME>/<USERNAME>.github.io.git master
 
