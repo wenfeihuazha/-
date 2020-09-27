@@ -1,25 +1,19 @@
-var length = 10;
-function fn(){
-  console.log(this.length)
+var array = [7,1,5,3,6,4];
+
+function a(arr){
+  let t = 0;
+  let q = 0;
+  arr.forEach((item,index) => {
+    let s = arr.slice(index,arr.length);
+    let m = Math.max(...s)
+    if(m > item){
+      let max =  m - item;
+      if(max > q){
+        q = max;
+        t = array.findIndex(v => v == m);
+      }
+    }
+  });
+  return t+1;
 }
-
-var obj = {
-  lenght: 5,
-  method:function(fn){
-    fn();
-    arguments[0]();
-  }
-};
-
-obj.method(fn,1)
-
-function a(xx){
-  this.x = xx;
-  return this;
-}
-
-var x = a(5);
-var y = a(6);
- 
-console.log(x.x);
-console.log(y.x);
+console.log(a(array))
